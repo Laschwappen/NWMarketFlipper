@@ -1,0 +1,160 @@
+#nw-helper-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 800px;                  /* 800px ist perfekt */
+  max-height: 1000px;            /* nicht auf "none" stellen, da sonst die listentabelle über dem header der Tabelle steht und die navbar nicht sichtbar ist */
+  background: rgba(20, 20, 20, 0.95);
+  color: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  z-index: 9999;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.6);
+}
+
+#nw-helper-box .table-container {
+  margin-top: 8px;
+  overflow-y: visible;
+}
+
+#nw-helper-box table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+#nw-helper-box th,
+#nw-helper-box td {
+  padding: 6px 8px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+#nw-helper-box th {
+  color: #ffcc00;
+  font-size: 14px;
+  position: sticky;
+  top: 0;
+  background: rgba(20,20,20,0.95);
+  z-index: 900; 
+}
+
+/* Header */
+#nw-helper-box #nw-header {
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  background: rgba(20,20,20,0.95);
+  z-index: 1000;  
+  position: relative;
+}
+
+#nw-helper-box #nw-header .title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #ffcc00;
+}
+
+#nw-helper-box #nw-header .controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+  font-size: 13px;
+}
+
+#nw-helper-box #nw-header .dropdowns select {
+  background: #222;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 13px;
+}
+
+#nw-helper-box #nw-header .info {
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-style: italic;
+}
+
+#nw-helper-box #nw-header .info button {
+  background: #333;
+  color: #ffcc00;
+  border: 1px solid #666;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 2px 6px;
+}
+
+#nw-helper-box #nw-header .info button:hover {
+  background: #444;
+}
+
+#nw-helper-box #nw-header .timestamp {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* colouring */
+#nw-helper-box td.min.low {
+  color: #00ff88; /* hellgrün */
+  font-weight: bold;
+}
+#nw-helper-box td.min.verylow {
+  color: #00cc66; /* dunkelgrün */
+  font-weight: bold;
+}
+#nw-helper-box td.max.high {
+  color: #ff5555; /* rot */
+  font-weight: bold;
+}
+#nw-helper-box td.max.veryhigh {
+  color: #cc0000; /* dunkelrot */
+  font-weight: bold;
+}
+#nw-helper-box td.median {
+  color: #66aaff; /* blau */
+}
+#nw-helper-box td.score.low {
+  color: #888; /* dunkle Kirche */
+}
+#nw-helper-box td.score.medium {
+  color: #ffaa00; /* gelb */
+}
+#nw-helper-box td.score.high {
+  color: #ffcc00; /* gold */
+  font-weight: bold;
+}
+
+/* Kauf- & Verkaufszeit  */
+#nw-helper-box td.buytime {
+  color: #00ffaa; /* türkisgrün */
+  font-style: italic;
+  font-size: 12px;
+}
+
+#nw-helper-box td.selltime {
+  color: #ff8888; /* hellrot */
+  font-style: italic;
+  font-size: 12px;
+}
+
+/*  Prognosen  */
+#nw-helper-box td.forecast-buy {
+  color: #00ff55;  /* leuchtend grün für Kauf-Prognose */
+  font-weight: bold;
+  font-size: 12px;
+}
+
+#nw-helper-box td.forecast-sell {
+  color: #ffcc00;  /* goldgelb für Verkaufs-Prognose */
+  font-weight: bold;
+  font-size: 12px;
+}

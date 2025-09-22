@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "NW Market Flipper",
+  "version": "0.3",
+  "description": "die Populären Einträge der Seite werden zuum berechnen genutzt. Local!(Data/*) - Eddi",
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "data/en.json",
+        "data/items.json",
+        "data/*.json"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
